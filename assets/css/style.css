@@ -4,6 +4,28 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+/*--------------------------------------------------------------
+# Quote
+--------------------------------------------------------------*/
+
+#quote {
+	background: url('path-to-background-image.jpg') no-repeat center center;
+	background-size: cover;
+	color: white;
+	padding: 60px 0;
+}
+#quote .section-title {
+	max-width: 700px;
+	margin: auto;
+}
+#quote p {
+	
+}
+#quote .display-4 {
+	font-size: 2.5rem;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
