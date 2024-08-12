@@ -1179,3 +1179,50 @@ section {
 }
 
 
+
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  background-color: #f5f8fd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e4edf9;
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #149ddd;
+}
+
+.course-name a:hover {
+  text-decoration: underline; /* Optional: Adds underline on hover if needed */
+}
+
+.course-time {
+  font-size: 14px;
+  color: #6f7180;
+}
+
+.department {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  color: #050d18;
+  padding-top: 5px;
+}
+
