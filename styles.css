@@ -1,0 +1,140 @@
+.content-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007acc;
+}
+
+.section-title {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.education-item,
+.experience-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.institution,
+.company {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.degree,
+.position {
+    color: #007acc;
+    font-weight: 500;
+    margin: 0.25rem 0;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.description {
+    margin-top: 0.5rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.news-list {
+    max-height: 500px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.news-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #28a745;
+}
+
+.news-date {
+    color: #28a745;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.news-content {
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+#theme-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.masthead__menu {
+    position: relative;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.last-updated {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #e1e4e8;
+    background-color: #f8f9fa;
+}
+
+.last-updated p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.services-list {
+    max-height: 500px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.service-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #6c757d; /* Gray color to distinguish from news items */
+}
+
+.service-category {
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.service-content {
+    margin-top: 0.5rem;
+    color: #333;
+}
