@@ -143,3 +143,24 @@
     margin-top: 0.5rem;
     color: #333;
 }
+
+/* Force light theme even when device/browser prefers dark */
+:root { color-scheme: light; }
+html, body {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: light; }
+  html, body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* common containers used by many Jekyll/academicpages themes */
+  #main, .page, .page__inner-wrap, .masthead, .sidebar, .initial-content {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+}
