@@ -152,7 +152,7 @@
   }
 
   .content-section {
-    background: #2a2a2a;
+    background: white ;
     border-left-color: #4da6ff;
   }
 
@@ -164,7 +164,7 @@
   .experience-item,
   .news-item,
   .service-item {
-    background: #333333;
+    background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
