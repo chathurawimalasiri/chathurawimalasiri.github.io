@@ -145,22 +145,38 @@
 }
 
 /* Force light theme even when device/browser prefers dark */
+/* Keep header/nav light even in OS dark mode */
 :root { color-scheme: light; }
-html, body {
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: light; }
+}
+
+/* Header / nav (AcademicPages) */
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+#site-nav.greedy-nav,
+#site-nav.greedy-nav .visible-links,
+#site-nav.greedy-nav .hidden-links {
   background: #ffffff !important;
   color: #111111 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root { color-scheme: light; }
-  html, body {
-    background: #ffffff !important;
-    color: #111111 !important;
-  }
-
-  /* common containers used by many Jekyll/academicpages themes */
-  #main, .page, .page__inner-wrap, .masthead, .sidebar, .initial-content {
-    background: #ffffff !important;
-    color: #111111 !important;
-  }
+/* Nav links */
+#site-nav.greedy-nav a,
+#site-nav.greedy-nav .masthead__menu-item a {
+  color: #111111 !important;
 }
+
+/* Mobile menu button + hamburger */
+#site-nav.greedy-nav button {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+#site-nav.greedy-nav .navicon,
+#site-nav.greedy-nav .navicon:before,
+#site-nav.greedy-nav .navicon:after {
+  background: #111111 !important;
+}
+
