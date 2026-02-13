@@ -149,6 +149,16 @@
   color-scheme: light only !important;
 }
 
+/* Disable dark mode at the root level */
+html[data-theme="dark"],
+html.dark,
+html.dark-mode,
+body[data-theme="dark"],
+body.dark,
+body.dark-mode {
+  color-scheme: light only !important;
+}
+
 /* Force body and html to always be white */
 html,
 body {
@@ -203,6 +213,11 @@ article,
 
 /* Override any dark mode media queries */
 @media (prefers-color-scheme: dark) {
+  /* Force EVERYTHING to stay light */
+  * {
+    color-scheme: light only !important;
+  }
+  
   html,
   body {
     background-color: #ffffff !important;
@@ -248,5 +263,39 @@ article,
   #site-nav.greedy-nav .navicon:after {
     background: #111111 !important;
     background-color: #111111 !important;
+  }
+  
+  /* Force your custom sections to stay light too */
+  .content-section {
+    background: #f8f9fa !important;
+  }
+  
+  .education-item,
+  .experience-item,
+  .news-item,
+  .service-item {
+    background: white !important;
+  }
+  
+  .institution,
+  .company,
+  .section-title {
+    color: #2c3e50 !important;
+  }
+  
+  .degree,
+  .position {
+    color: #007acc !important;
+  }
+  
+  .description,
+  .news-content,
+  .service-content,
+  .about-content p {
+    color: #555 !important;
+  }
+  
+  .date {
+    color: #666 !important;
   }
 }
