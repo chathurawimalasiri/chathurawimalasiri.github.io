@@ -144,39 +144,57 @@
     color: #333;
 }
 
-/* Force light theme even when device/browser prefers dark */
-/* Keep header/nav light even in OS dark mode */
-:root { color-scheme: light; }
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  :root { color-scheme: light; }
-}
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
 
-/* Header / nav (AcademicPages) */
-.masthead,
-.masthead__inner-wrap,
-.masthead__menu,
-#site-nav.greedy-nav,
-#site-nav.greedy-nav .visible-links,
-#site-nav.greedy-nav .hidden-links {
-  background: #ffffff !important;
-  color: #111111 !important;
-}
+  .content-section {
+    background: #2a2a2a;
+    border-left-color: #4da6ff;
+  }
 
-/* Nav links */
-#site-nav.greedy-nav a,
-#site-nav.greedy-nav .masthead__menu-item a {
-  color: #111111 !important;
-}
+  .section-title {
+    color: #e0e0e0;
+  }
 
-/* Mobile menu button + hamburger */
-#site-nav.greedy-nav button {
-  background: #ffffff !important;
-  color: #111111 !important;
-}
+  .education-item,
+  .experience-item,
+  .news-item,
+  .service-item {
+    background: #333333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
 
-#site-nav.greedy-nav .navicon,
-#site-nav.greedy-nav .navicon:before,
-#site-nav.greedy-nav .navicon:after {
-  background: #111111 !important;
-}
+  .institution,
+  .company {
+    color: #e0e0e0;
+  }
 
+  .degree,
+  .position {
+    color: #4da6ff;
+  }
+
+  .description,
+  .news-content,
+  .service-content,
+  .about-content p {
+    color: #cccccc;
+  }
+
+  .date {
+    color: #999999;
+  }
+
+  .last-updated {
+    background-color: #2a2a2a;
+    border-top-color: #444444;
+  }
+
+  .last-updated p {
+    color: #999999;
+  }
+}
