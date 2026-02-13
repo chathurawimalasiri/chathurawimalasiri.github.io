@@ -143,3 +143,58 @@
     margin-top: 0.5rem;
     color: #333;
 }
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  .content-section {
+    background: #2a2a2a;
+    border-left-color: #4da6ff;
+  }
+
+  .section-title {
+    color: #e0e0e0;
+  }
+
+  .education-item,
+  .experience-item,
+  .news-item,
+  .service-item {
+    background: #333333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .institution,
+  .company {
+    color: #e0e0e0;
+  }
+
+  .degree,
+  .position {
+    color: #4da6ff;
+  }
+
+  .description,
+  .news-content,
+  .service-content,
+  .about-content p {
+    color: #cccccc;
+  }
+
+  .date {
+    color: #999999;
+  }
+
+  .last-updated {
+    background-color: #2a2a2a;
+    border-top-color: #444444;
+  }
+
+  .last-updated p {
+    color: #999999;
+  }
+}
