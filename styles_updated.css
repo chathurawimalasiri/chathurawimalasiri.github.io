@@ -144,57 +144,109 @@
     color: #333;
 }
 
-/* Dark mode support */
+/* FORCE LIGHT MODE - Override dark mode completely */
+:root {
+  color-scheme: light only !important;
+}
+
+/* Force body and html to always be white */
+html,
+body {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Force all main content areas to stay light */
+.page,
+.page__content,
+main,
+article,
+.archive,
+.layout--single {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Header / nav (AcademicPages) */
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+#site-nav.greedy-nav,
+#site-nav.greedy-nav .visible-links,
+#site-nav.greedy-nav .hidden-links {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+/* Nav links */
+#site-nav.greedy-nav a,
+#site-nav.greedy-nav .masthead__menu-item a {
+  color: #111111 !important;
+}
+
+/* Mobile menu button + hamburger */
+#site-nav.greedy-nav button {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+#site-nav.greedy-nav .navicon,
+#site-nav.greedy-nav .navicon:before,
+#site-nav.greedy-nav .navicon:after {
+  background: #111111 !important;
+  background-color: #111111 !important;
+}
+
+/* Override any dark mode media queries */
 @media (prefers-color-scheme: dark) {
+  html,
   body {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .page,
+  .page__content,
+  main,
+  article,
+  .archive,
+  .layout--single {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000000 !important;
   }
 
-  .content-section {
-    background: #2a2a2a;
-    border-left-color: #4da6ff;
+  .masthead,
+  .masthead__inner-wrap,
+  .masthead__menu,
+  #site-nav.greedy-nav,
+  #site-nav.greedy-nav .visible-links,
+  #site-nav.greedy-nav .hidden-links {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111111 !important;
   }
 
-  .section-title {
-    color: #e0e0e0;
+  #site-nav.greedy-nav a,
+  #site-nav.greedy-nav .masthead__menu-item a {
+    color: #111111 !important;
   }
 
-  .education-item,
-  .experience-item,
-  .news-item,
-  .service-item {
-    background: #333333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  #site-nav.greedy-nav button {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111111 !important;
   }
 
-  .institution,
-  .company {
-    color: #e0e0e0;
-  }
-
-  .degree,
-  .position {
-    color: #4da6ff;
-  }
-
-  .description,
-  .news-content,
-  .service-content,
-  .about-content p {
-    color: #cccccc;
-  }
-
-  .date {
-    color: #999999;
-  }
-
-  .last-updated {
-    background-color: #2a2a2a;
-    border-top-color: #444444;
-  }
-
-  .last-updated p {
-    color: #999999;
+  #site-nav.greedy-nav .navicon,
+  #site-nav.greedy-nav .navicon:before,
+  #site-nav.greedy-nav .navicon:after {
+    background: #111111 !important;
+    background-color: #111111 !important;
   }
 }
