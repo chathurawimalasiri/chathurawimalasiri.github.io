@@ -75,12 +75,12 @@
     color: #333;
 }
 
-#theme-toggle {
+/* #theme-toggle {
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-}
+} */
 
 .masthead__menu {
     position: relative;
@@ -88,7 +88,8 @@
 
 /* Reduce top menu font size */
 .masthead__menu-item a {
-    font-size: 0.85rem;   /* try 0.8rem if you want smaller */
+    font-size: 0.85rem;
+    /* try 0.8rem if you want smaller */
 }
 
 .about-content p {
@@ -130,7 +131,8 @@
     background: white;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-left: 3px solid #6c757d; /* Gray color to distinguish from news items */
+    border-left: 3px solid #6c757d;
+    /* Gray color to distinguish from news items */
 }
 
 .service-category {
@@ -145,14 +147,14 @@
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #1a1a1a;
     color: #e0e0e0;
   }
 
   .content-section {
-    background: white ;
+    background: #2a2a2a;
     border-left-color: #4da6ff;
   }
 
@@ -164,7 +166,7 @@
   .experience-item,
   .news-item,
   .service-item {
-    background: white;
+    background: #333333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
@@ -197,4 +199,4 @@
   .last-updated p {
     color: #999999;
   }
-}
+} */

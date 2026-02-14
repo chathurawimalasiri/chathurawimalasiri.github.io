@@ -63,8 +63,8 @@
                                 Posts</a></li>
                         <li class="masthead__menu-item"><a href="https://academicpages.github.io/cv/">CV</a></li>
                         <li class="masthead__menu-item"><a href="https://academicpages.github.io/markdown/">Guide</a>
-                        </li> 
-                        <li id="theme-toggle" class="masthead__menu-item persist tail"> <a role="button"
+                        </li> -->
+                        <!-- <li id="theme-toggle" class="masthead__menu-item persist tail"> <a role="button"
                                 aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun"
                                     aria-hidden="true" title="toggle theme"></i></a></li> -->
                     </ul>
@@ -397,8 +397,37 @@
             </div>
         </article>
     </div>
-
     <script type="module" src="https://academicpages.github.io/assets/js/main.min.js"></script>
+
+    <script>
+        (function () {
+            const root = document.documentElement;
+
+            // Always default to LIGHT (ignores OS/browser dark)
+            const saved = localStorage.getItem("theme");
+            root.dataset.theme = saved || "light";
+
+            const btn = document.getElementById("theme-toggle");
+            const icon = document.getElementById("theme-icon");
+
+            function syncIcon(theme) {
+                if (!icon) return;
+                icon.className = theme === "dark" ? "fa-solid fa-moon" : "fa-solid fa-sun";
+            }
+            syncIcon(root.dataset.theme);
+
+            if (!btn) return;
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                const next = root.dataset.theme === "dark" ? "light" : "dark";
+                root.dataset.theme = next;
+                localStorage.setItem("theme", next);
+                syncIcon(next);
+            });
+        })();
+    </script>
+
+
 </body>
 
 </html>

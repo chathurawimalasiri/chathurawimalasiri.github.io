@@ -108,12 +108,12 @@
             color: #333;
         }
 
-        #theme-toggle {
+        /* #theme-toggle {
             position: absolute;
             right: 1rem;
             top: 50%;
             transform: translateY(-50%);
-        }
+        } */
 
         .masthead__menu {
             position: relative;
@@ -427,7 +427,8 @@
                     <div class="publication-item" data-type="journal">
                         <div class="publication-type type-journal">Journal</div>
                         <div class="publication-title">
-                            <a href="https://www.nature.com/articles/s41598-026-38061-1" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.nature.com/articles/s41598-026-38061-1" target="_blank"
+                                rel="noopener noreferrer">
                                 AI-assisted radiographic analysis in detecting alveolar bone-loss severity and
                                 patterns
                             </a>
@@ -441,8 +442,8 @@
                         </div>
                         <div class="publication-year">2025</div>
                         <div class="publication-links">
-                            <a href="https://www.nature.com/articles/s41598-026-38061-1" class="publication-link" target="_blank"
-                                rel="noopener noreferrer">Journal</a>
+                            <a href="https://www.nature.com/articles/s41598-026-38061-1" class="publication-link"
+                                target="_blank" rel="noopener noreferrer">Journal</a>
                             <a href="https://www.nature.com/articles/s41598-026-38061-1.pdf" class="publication-link"
                                 target="_blank">PDF</a>
                             <!-- <a href="#" class="publication-link">Code</a> -->
@@ -619,6 +620,36 @@
 
         });
     </script>
+
+    <script>
+        (function () {
+            const root = document.documentElement;
+
+            // Always default to LIGHT (ignores OS/browser dark)
+            const saved = localStorage.getItem("theme");
+            root.dataset.theme = saved || "light";
+
+            const btn = document.getElementById("theme-toggle");
+            const icon = document.getElementById("theme-icon");
+
+            function syncIcon(theme) {
+                if (!icon) return;
+                icon.className = theme === "dark" ? "fa-solid fa-moon" : "fa-solid fa-sun";
+            }
+            syncIcon(root.dataset.theme);
+
+            if (!btn) return;
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                const next = root.dataset.theme === "dark" ? "light" : "dark";
+                root.dataset.theme = next;
+                localStorage.setItem("theme", next);
+                syncIcon(next);
+            });
+        })();
+    </script>
+
+
 </body>
 
 </html>
