@@ -479,6 +479,35 @@
                             </div>
                         </div>
 
+                        <div class="publication-item" data-type="preprint">
+                            <div class="publication-type type-preprint">Preprint</div>
+
+                            <div class="publication-title">
+                                <a href="https://arxiv.org/abs/2605.23995" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Task-Aligned Self-Supervised Learning for Medical Image Analysis: A Systematic Review and Practical Design Guidelines
+                                </a>
+                            </div>
+
+                            <div class="publication-authors">
+                                <strong>Chathura Wimalasiri</strong>, Kishor Nandakishor, Marimuthu Palaniswami
+                            </div>
+
+                            <div class="publication-venue">
+                                <em> arxiv </em> 
+                            </div>
+
+                            <div class="publication-year">2026</div>
+
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/abs/2605.23995" class="publication-link"
+                                    target="_blank" rel="noopener noreferrer">Preprint</a>
+
+                                <a href="https://arxiv.org/pdf/2605.23995.pdf"
+                                    class="publication-link" target="_blank" rel="noopener noreferrer">PDF</a>
+                            </div>
+                        </div>
+
 
                     <!-- <div class="publication-item" data-type="conference">
                             <div class="publication-type type-conference">Conference</div>
@@ -645,6 +674,16 @@
 
                 noResults.style.display = visibleCount === 0 ? 'block' : 'none';
             }
+
+            // Sort publications by year, newest first
+            const list = document.getElementById('publicationsList');
+            [...document.querySelectorAll('.publication-item')]
+                .sort((a, b) => {
+                    const yearA = parseInt(a.querySelector('.publication-year').textContent, 10);
+                    const yearB = parseInt(b.querySelector('.publication-year').textContent, 10);
+                    return yearB - yearA;
+                })
+                .forEach(item => list.appendChild(item));
 
         });
     </script>
